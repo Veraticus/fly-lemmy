@@ -1,0 +1,29 @@
+{
+  hostname: "${HOSTNAME}"
+  bind: "::"
+  port: 8536
+  tls_enabled: true
+
+  setup: {
+    admin_username: "${LEMMY_ADMIN_USERNAME}"
+    admin_password: "${LEMMY_ADMIN_PASSWORD}"
+    site_name: "${HOSTNAME}"
+  }
+
+  pictrs: {
+    url: "http://${REGION}.${NAME}-pictrs.internal:8080/"
+    api_key: "${PICTRS_API_KEY}"
+  }
+
+  email: {
+    smtp_server: "${LEMMY_EMAIL_SMTP_SERVER}"
+    # Login name for smtp server
+    smtp_login: "${LEMMY_EMAIL_SMTP_LOGIN}"
+    # Password to login to the smtp server
+    smtp_password: "${LEMMY_EMAIL_SMTP_PASSWORD}"
+    # Address to send emails from, eg "noreply@your-instance.com"
+    smtp_from_address: "noreply@${HOSTNAME}"
+    # Whether or not smtp connections should use tls. Can be none, tls, or starttls
+    tls_type: "starttls"
+  }
+}

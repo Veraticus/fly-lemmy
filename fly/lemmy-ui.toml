@@ -1,0 +1,12 @@
+app = "${NAME}-lemmy-ui"
+primary_region = "${REGION}"
+
+[build]
+  image = "dessalines/lemmy-ui:0.17.3"
+
+[env]
+  HOSTNAME = "${HOSTNAME}"
+  LEMMY_UI_HOST = "fly-local-6pn:1234"
+  LEMMY_UI_LEMMY_INTERNAL_HOST = "${REGION}.${NAME}-lemmy.internal:8536"
+  LEMMY_UI_LEMMY_EXTERNAL_HOST = "${HOSTNAME}:443"
+  LEMMY_HTTPS=true
