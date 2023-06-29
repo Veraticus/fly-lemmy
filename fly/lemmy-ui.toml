@@ -2,7 +2,7 @@ app = "${NAME}-lemmy-ui"
 primary_region = "${REGION}"
 
 [build]
-  image = "dessalines/lemmy-ui:0.17.4"
+  image = "dessalines/lemmy-ui:0.18.0"
 
 [env]
   HOSTNAME = "${HOSTNAME}"
