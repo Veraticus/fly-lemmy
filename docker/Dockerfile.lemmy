@@ -1,2 +1,2 @@
-FROM dessalines/lemmy:0.18.0
+FROM dessalines/lemmy:0.18.1
 COPY ./lemmy/lemmy.hjson /config/config.hjson
